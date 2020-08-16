@@ -7,6 +7,7 @@ const formCircleSelector = '#formCircle';
 const formTriangleSelector = '#formTriangle';
 const formQuadraticSelector = '#quadratic';
 const formPythTripleSelector = '#pythagorasTriple';
+const formCoDivisorsSelector = '#collectivedDivisors';
 
 const formSquareResultSelectors = {
   area: '#resultArea',
@@ -35,6 +36,10 @@ const formQuadraticResultSelectors = {
 
 const formPythTripleResultSelectors = {
   isPythagorasTriple: '#isPythagorasTriple'
+}
+
+const formCoDivisorsResultSelectors = {
+  divisors: '#divisors'
 }
 
 
@@ -122,8 +127,6 @@ const formQuadratic = new Form(
   
   formQuadratic.setEventListeners();
   
-  
-  
 
 const formPythTriple = new Form(
   formPythTripleSelector, 
@@ -150,6 +153,42 @@ const formPythTriple = new Form(
   formPythTripleResultSelectors)
   
   formPythTriple.setEventListeners();
+  
+  
+  
+const formCoDivisors = new Form(
+  formCoDivisorsSelector, 
+  {handleFormSubmit: (formData) => {
+    const number1 = Number(formData.number1);
+    const number2 = Number(formData.number2);
+
+    let arr1 = [];
+    let arr2 = [];
+    let result = [];
+
+    for (let i = 1; i < number1; i++) {
+      if (number1 % i === 0) {
+        arr1.push(i);
+      }
+    } 
+
+    for (let i = 1; i < number2; i++) {
+      if (number2 % i === 0) {
+        arr2.push(i);
+      }
+    } 
+
+    for (let elem of arr1) {
+      if (arr2.indexOf(elem) !== -1) {
+        result.push(elem);
+      }
+    }
+
+    formCoDivisors.setResult({divisors: result.join(' ')});
+  }},
+  formCoDivisorsResultSelectors)
+  
+  formCoDivisors.setEventListeners();
   
   
   

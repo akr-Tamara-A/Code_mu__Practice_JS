@@ -217,6 +217,33 @@
             </span>
         </fieldset>
       </form>
+
+      <!-- Общие делители двух чисел -->
+      <form class="form" id="collectivedDivisors">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Общие делители двух чисел</legend>
+          <label class="form__label">
+            Введите первое число:
+            <input 
+              type="text" 
+              name="number1"
+              class="form__input">
+          </label>
+          <label class="form__label">
+            Введите второе число:
+            <input 
+              type="text" 
+              name="number2"
+              class="form__input">
+          </label>
+          <button type="submit" class="form__button">Проверить</button>
+          <p class="form__answer">
+            Общие делители:
+            <span class="form__result" id="divisors">
+              
+            </span>
+        </fieldset>
+      </form>
     </div>
   </div>
   <script type="module" src="./pages/index.js"></script>
