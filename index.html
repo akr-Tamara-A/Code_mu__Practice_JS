@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code.mu Practice</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body class="page">
+  <div class="page__container">
+    <h1 class="page__title">Калькулятор фигур</h1>
+    <div class="page__section">
+
+      <!-- Форма подсчета площади и периметра квадрата -->
+      <form class="form" id="formSquare">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Калькулятор для квадрата</legend>
+          <label classlegend="form__label">
+            Введите длину стороны квадрата (см):
+            <input 
+              type="text" 
+              pattern="^[ 0-9]+$" 
+              name="sideOfSquare"
+              class="form__input">
+          </label>
+          <button type="submit" class="form__button">Посчитать</button>
+          <p class="form__answer">
+            Площадь квадрата (см2): 
+            <span class="form__result" id="area">
+              
+            </span>
+          </p>
+          <p class="answer">
+            Периметр квадрата (см): 
+            <span class="form__result" id="perimeter">
+              
+            </span>
+          </p>
+        </fieldset>
+      </form>
+
+      <!-- Форма подсчета площади и периметра прямоугольника -->
+      <form class="form" id="formRectangle">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Калькулятор для прямоугольника</legend>
+          <label class="form__label">
+            Введите ширину прямоугольника (см):
+            <input 
+              type="text" 
+              pattern="^[ 0-9]+$" 
+              name="sideAOfRectangle"
+              class="form__input">
+          </label>
+          <label class="form__label">
+            Введите длину прямоугольника (см):
+            <input 
+              type="text" 
+              pattern="^[ 0-9]+$" 
+              name="sideBOfRectangle"
+              class="form__input">
+          </label>
+          <button type="submit" class="form__button">Посчитать</button>
+          <p class="form__answer">
+            Площадь прямоугольника (см2): 
+            <span class="form__result" id="area">
+              
+            </span>
+          </p>
+          <p class="answer">
+            Периметр прямоугольника (см): 
+            <span class="form__result" id="perimeter">
+              
+            </span>
+          </p>
+        </fieldset>
+      </form>
+
+      <!-- Форма подсчета площади и периметра круга -->
+      <form class="form" id="formCircle">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Калькулятор для круга</legend>
+          <label class="form__label">
+            Введите радиус круга (см):
+            <input 
+              type="text" 
+              pattern="^[ 0-9]+$" 
+              name="radius"
+              class="form__input">
+          </label>
+          <button type="submit" class="form__button">Посчитать</button>
+          <p class="form__answer">
+            Площадь круга (см2): 
+            <span class="form__result" id="area">
+              
+            </span>
+          </p>
+          <p class="answer">
+            Периметр круга (см): 
+            <span class="form__result" id="perimeter">
+              
+            </span>
+          </p>
+        </fieldset>
+      </form>
+
+      <!-- Форма подсчета площади и периметра треугольника -->
+      <form class="form" id="formTriangle">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Калькулятор для треугольника</legend>
+          <label class="form__label">
+            Введите длину стороны А треугольника (см):
+            <input 
+              type="text" 
+              pattern="^[ 0-9]+$" 
+              name="sideA"
+              class="form__input">
+          </label>
+          <label class="form__label">
+            Введите длину стороны B треугольника (см):
+            <input 
+              type="text" 
+              pattern="^[ 0-9]+$" 
+              name="sideB"
+              class="form__input">
+          </label>
+          <label class="form__label">
+            Введите длину стороны C треугольника (см):
+            <input 
+              type="text" 
+              pattern="^[ 0-9]+$" 
+              name="sideC"
+              class="form__input">
+          </label>
+          <button type="submit" class="form__button">Посчитать</button>
+          <p class="form__answer">
+            Площадь треугольника (см2): 
+            <span class="form__result" id="area">
+              
+            </span>
+          </p>
+          <p class="answer">
+            Периметр треугольника (см): 
+            <span class="form__result" id="perimeter">
+              
+            </span>
+          </p>
+        </fieldset>
+      </form>
+    </div>
+    <h1 class="page__title">Математические калькуляторы</h1>
+    <div class="page__section">
+      
+      <!-- Нахождение корней квадратного уравнения -->
+      <form class="form" id="quadratic">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Нахождение корней квадратного уравнения</legend>
+          <label class="form__label">
+            Введите первый коэффициент:
+            <input 
+              type="text" 
+              name="coefficientA"
+              class="form__input">
+          </label>
+          <label class="form__label">
+            Введите второй коэффициент:
+            <input 
+              type="text" 
+              name="coefficientB"
+              class="form__input">
+          </label>
+          <label class="form__label">
+            Введите третий коэффициент:
+            <input 
+              type="text" 
+              name="coefficientC"
+              class="form__input">
+          </label>
+          <button type="submit" class="form__button">Посчитать</button>
+          <p class="form__answer">
+            Первый корень квадратного уравнения:
+            <span class="form__result" id="quadraticRoot1">
+              
+            </span>
+          </p>
+          <p class="form__answer">
+            Второй корень квадратного уравнения:
+            <span class="form__result" id="quadraticRoot2">
+              
+            </span>
+          </p>
+        </fieldset>
+      </form>
+
+      <!-- Проверка являются ли числа тройкой Пифагора -->
+      <form class="form" id="pythagorasTriple">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Являются ли числа тройкой Пифагора</legend>
+          <label class="form__label">
+            Введите первый коэффициент:
+            <input 
+              type="text" 
+              name="coefficientA"
+              class="form__input">
+          </label>
+          <label class="form__label">
+            Введите второй коэффициент:
+            <input 
+              type="text" 
+              name="coefficientB"
+              class="form__input">
+          </label>
+          <label class="form__label">
+            Введите третий коэффициент:
+            <input 
+              type="text" 
+              name="coefficientC"
+              class="form__input">
+          </label>
+          <button type="submit" class="form__button">Проверить</button>
+          <p class="form__answer">
+            Ответ:
+            <span class="form__result" id="isPythagorasTriple">
+              
+            </span>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <script type="module" src="./pages/index.js"></script>
+</body>
+</html>
