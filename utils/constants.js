@@ -10,7 +10,7 @@ export const formSelectors = {
   coDivisors: "#collectivedDivisors",
   maxCoDivisors: "#maxCollectivedDivisors",
   formMinMultiple: "#formMinMultiple",
-  numberOfWords: "#formNumberOfWords",
+  formTextAnalysis: "#formTextAnalysis",
 };
 
 export const formResultSelectors = {
@@ -56,7 +56,7 @@ export const formResultSelectors = {
   minMultiple: {
     minMultiple: "#minMultiple",
   },
-  numberOfWords: {
+  formTextAnalysis: {
     numberOfWords: "#numberOfWords",
     numberOfCharacters: "#numberOfCharacters",
     numberOfCharactersNotBsp: "#numberOfCharactersNotBsp",

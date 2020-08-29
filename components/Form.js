@@ -5,7 +5,7 @@ export default class Form {
     this._form = document.querySelector(this._formSelector);
     this.handleFormSubmit = handleFormSubmit;
     this._inputList = this._form.querySelectorAll(".form__input");
-    /* this._textarea = this._form.querySelector(".form__textarea"); */
+    this._textarea = this._form.querySelector(".form__textarea");
     this._answersList = this._form.querySelectorAll(".form__result");
   }
 
@@ -20,21 +20,24 @@ export default class Form {
   }
 
   /** Получение значения textarea формы */
-/*   _getTextareaValue() {
-    this._textareaValue = this._textarea.value;
-    console.log(this._textareaValue);
-  } */
-
-  /** */
-/*   _setFormValues() {
-
+  _getTextareaValue() {
+    return this._textareaValue = this._textarea.value;
   }
- */
+
+  /** Выбор значений полей формы */
+  _setFormValues() {
+    if (this._form.contains(this._textarea)) {
+      return this._getTextareaValue();
+    } else {
+      return this._getInputValues();
+    }
+  }
+
   /** Навешивание слушателя отправления формы */
   setEventListeners() {
     this._form.addEventListener("submit", (evt) => {
       evt.preventDefault();
-      this.handleFormSubmit(this._getInputValues());
+      this.handleFormSubmit(this._setFormValues());
     });
   }
 
