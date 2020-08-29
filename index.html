@@ -285,13 +285,79 @@
           </label>
           <button type="submit" class="form__button">Проверить</button>
           <p class="form__answer">
-            Общие делители:
-            <span class="form__result" id="divisors">
+            Наибольший общий делитель:
+            <span class="form__result" id="maxDivisor">
+              
+            </span>
+        </fieldset>
+      </form>
+
+      <!-- Наименьшее общее кратное двух чисел -->
+      <form class="form" id="formMinMultiple">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Наименьшее общее кратное двух чисел</legend>
+          <label class="form__label">
+            Введите первое число:
+            <input 
+              type="text" 
+              name="number1"
+              class="form__input">
+          </label>
+          <label class="form__label">
+            Введите второе число:
+            <input 
+              type="text" 
+              name="number2"
+              class="form__input">
+          </label>
+          <button type="submit" class="form__button">Проверить</button>
+          <p class="form__answer">
+            Наименьшее общее кратное:
+            <span class="form__result" id="minMultiple">
               
             </span>
         </fieldset>
       </form>
     </div>
+
+<!--     <h1 class="page__title">Анализатор текста</h1>
+    <div class="page__section"> -->
+      <!-- Подсчет количества слов -->
+<!--       <form class="form" id="formNumberOfWords">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Содержание слов и символов в тексте</legend>
+          <label class="form__label">
+            Введите текст:
+            <textarea 
+              name="text"
+              maxlength="400"
+              class="form__textarea"></textarea>
+          </label>
+          <button type="submit" class="form__button">Проверить</button>
+          <p class="form__answer">
+            Количество слов в тексте:
+            <span class="form__result" id="numberOfWords">
+              
+            </span>
+          <p class="form__answer">
+            Количество символов в тексте:
+            <span class="form__result" id="numberOfCharacters">
+              
+            </span>
+          <p class="form__answer">
+            Количество символов (без пробелов) в тексте:
+            <span class="form__result" id="numberOfCharactersNotBsp">
+              
+            </span>
+          <p class="form__answer">
+            Процентное содержание символов:
+            <span class="form__result" id="percentageOfCharacters">
+              
+            </span>
+          </fieldset>
+    </div> -->
+
+
   </div>
   <script type="module" src="./pages/index.js"></script>
 </body>
