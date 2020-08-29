@@ -23,6 +23,7 @@
   grid-template-columns: repeat(auto-fit, 400px);
   row-gap: 10px;
   column-gap: 10px;
+  justify-content: center;
 }
 
 .form {

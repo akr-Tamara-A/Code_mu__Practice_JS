@@ -218,10 +218,57 @@
         </fieldset>
       </form>
 
+      <!-- Делители числа -->
+      <form class="form" id="divisorsOfNumber">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Делители числа</legend>
+          <label class="form__label">
+            Введите число:
+            <input 
+              type="text" 
+              name="number"
+              class="form__input">
+          </label>
+          <button type="submit" class="form__button">Проверить</button>
+          <p class="form__answer">
+            Делители:
+            <span class="form__result" id="divisors">
+              
+            </span>
+        </fieldset>
+      </form>
+
       <!-- Общие делители двух чисел -->
       <form class="form" id="collectivedDivisors">
         <fieldset class="form__fieldset">
           <legend class="form__legend">Общие делители двух чисел</legend>
+          <label class="form__label">
+            Введите первое число:
+            <input 
+              type="text" 
+              name="number1"
+              class="form__input">
+          </label>
+          <label class="form__label">
+            Введите второе число:
+            <input 
+              type="text" 
+              name="number2"
+              class="form__input">
+          </label>
+          <button type="submit" class="form__button">Проверить</button>
+          <p class="form__answer">
+            Общие делители:
+            <span class="form__result" id="divisors">
+              
+            </span>
+        </fieldset>
+      </form>
+
+      <!-- Наибольший общий делитель двух чисел -->
+      <form class="form" id="maxCollectivedDivisors">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Наибольший общий делитель двух чисел</legend>
           <label class="form__label">
             Введите первое число:
             <input 

@@ -7,7 +7,9 @@ const formCircleSelector = '#formCircle';
 const formTriangleSelector = '#formTriangle';
 const formQuadraticSelector = '#quadratic';
 const formPythTripleSelector = '#pythagorasTriple';
+const formDivisorsSelector = '#divisorsOfNumber';
 const formCoDivisorsSelector = '#collectivedDivisors';
+const formMaxCoDivisorsSelector = '#maxCollectivedDivisors';
 
 const formSquareResultSelectors = {
   area: '#resultArea',
@@ -38,12 +40,20 @@ const formPythTripleResultSelectors = {
   isPythagorasTriple: '#isPythagorasTriple'
 }
 
+const formDivisorsResultSelectors = {
+  divisors: '#divisors'
+}
+
 const formCoDivisorsResultSelectors = {
   divisors: '#divisors'
 }
 
+const formMaxCoDivisorsResultSelectors = {
+  divisors: '#divisors'
+}
 
 
+/** Форма подсчета площади и периметра квадрата */
 const formSquare = new Form(
   formSquareSelector, 
   {handleFormSubmit: (formData) => {
@@ -58,6 +68,7 @@ const formSquare = new Form(
 formSquare.setEventListeners();
 
 
+/** Форма подсчета площади и периметра прямоугольника */
 const formRectangle = new Form(
   formRectangleSelector, 
   {handleFormSubmit: (formData) => {
@@ -73,6 +84,7 @@ const formRectangle = new Form(
   formRectangle.setEventListeners();
 
 
+/** Форма подсчета площади и периметра круга */
 const formCircle = new Form(
   formCircleSelector, 
   {handleFormSubmit: (formData) => {
@@ -87,6 +99,7 @@ const formCircle = new Form(
   formCircle.setEventListeners();
 
 
+/** Форма подсчета площади и периметра треугольника */
 const formTriangle = new Form(
   formTriangleSelector, 
   {handleFormSubmit: (formData) => {
@@ -104,6 +117,7 @@ const formTriangle = new Form(
   formTriangle.setEventListeners();
 
 
+/** Нахождение корней квадратного уравнения */
 const formQuadratic = new Form(
   formQuadraticSelector, 
   {handleFormSubmit: (formData) => {
@@ -128,6 +142,7 @@ const formQuadratic = new Form(
   formQuadratic.setEventListeners();
   
 
+/** Проверка являются ли числа тройкой Пифагора */
 const formPythTriple = new Form(
   formPythTripleSelector, 
   {handleFormSubmit: (formData) => {
@@ -154,10 +169,67 @@ const formPythTriple = new Form(
   
   formPythTriple.setEventListeners();
   
+
+/** Делители числа */
+const formDivisors = new Form(
+  formDivisorsSelector, 
+  {handleFormSubmit: (formData) => {
+    const number = Number(formData.number);
+
+    let arr = [];
+
+    for (let i = 1; i <= number; i++) {
+      if (number % i === 0) {
+        arr.push(i);
+      }
+    } 
+
+    formDivisors.setResult({divisors: arr.join(' ')});
+  }},
+  formDivisorsResultSelectors)
   
+  formDivisors.setEventListeners();
   
+
+/** Общие делители двух чисел */
 const formCoDivisors = new Form(
   formCoDivisorsSelector, 
+  {handleFormSubmit: (formData) => {
+    const number1 = Number(formData.number1);
+    const number2 = Number(formData.number2);
+
+    let arr1 = [];
+    let arr2 = [];
+    let result = [];
+
+    for (let i = 1; i <= number1; i++) {
+      if (number1 % i === 0) {
+        arr1.push(i);
+      }
+    } 
+
+    for (let i = 1; i <= number2; i++) {
+      if (number2 % i === 0) {
+        arr2.push(i);
+      }
+    } 
+
+    for (let elem of arr1) {
+      if (arr2.indexOf(elem) !== -1) {
+        result.push(elem);
+      }
+    }
+
+    formCoDivisors.setResult({divisors: result.join(' ')});
+  }},
+  formCoDivisorsResultSelectors)
+  
+  formCoDivisors.setEventListeners();
+  
+
+/** Наибольший общий делитель двух чисел */
+const formMaxCoDivisors = new Form(
+  formMaxCoDivisorsSelector, 
   {handleFormSubmit: (formData) => {
     const number1 = Number(formData.number1);
     const number2 = Number(formData.number2);
@@ -183,16 +255,15 @@ const formCoDivisors = new Form(
         result.push(elem);
       }
     }
+    let maxDivisor = Math.max.apply(null, result)
 
-    formCoDivisors.setResult({divisors: result.join(' ')});
+    formMaxCoDivisors.setResult({divisors: maxDivisor});
   }},
-  formCoDivisorsResultSelectors)
+  formMaxCoDivisorsResultSelectors)
   
-  formCoDivisors.setEventListeners();
+  formMaxCoDivisors.setEventListeners();
   
-  
-  
-  
+
 
 
 
