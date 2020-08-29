@@ -11,6 +11,7 @@ export const formSelectors = {
   maxCoDivisors: "#maxCollectivedDivisors",
   formMinMultiple: "#formMinMultiple",
   formTextAnalysis: "#formTextAnalysis",
+  formGuessNumber: "#formGuessNumber",
 };
 
 export const formResultSelectors = {
@@ -61,5 +62,9 @@ export const formResultSelectors = {
     numberOfCharacters: "#numberOfCharacters",
     numberOfCharactersNotBsp: "#numberOfCharactersNotBsp",
     percentageOfCharacters: "#percentageOfCharacters",
+  },
+  guessNumber: {
+    answer: "#answer",
+    attempts: "#attempts",
   },
 };

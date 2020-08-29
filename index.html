@@ -355,8 +355,31 @@
               
             </span>
           </fieldset>
+        </form>
     </div>
 
+    <h1 class="page__title">Игра "Угадай число"</h1>
+    <div class="page__section">
+      <form class="form" id="formGuessNumber">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Угадайте число</legend>
+          <label class="form__label">
+            Введите число от 1 до 100:
+            <input 
+              type="text" 
+              name="number"
+              class="form__input">
+          </label>
+          <button type="submit" class="form__button">Проверить</button>
+          <p class="form__answer">
+            Ответ: 
+            <span class="form__result" id="answer"></span>
+          <p class="form__answer">
+            Попытка: 
+            <span class="form__result" id="attempts"></span>
+        </fieldset>
+      </form>
+    </div>
 
   </div>
   <script type="module" src="./pages/index.js"></script>

@@ -1,6 +1,8 @@
 import Form from "../components/Form.js";
+import FormGuessNumber from "../components/FormGuessNumber.js";
 
 import { formSelectors, formResultSelectors } from "../utils/constants.js";
+import { randomNumber } from "../utils/utils.js";
 
 /** ---------------- Калькулятор фигур ---------------- */
 
@@ -352,3 +354,38 @@ const formMinMultiple = new Form(
 );
 
 formTextAnalysis.setEventListeners();
+
+
+  /** ---------------- Игра "Угадай число" ---------------- */
+  const guessNumber = new FormGuessNumber(
+    formSelectors.formGuessNumber,
+    {
+      handleFormSubmit: (formData, attempt, hiddenNumber) => {
+        const userNumber = Number(formData.number);
+
+        let answer;
+        let attempts;
+        if (userNumber < hiddenNumber) {
+          answer = 'Введите число побольше'
+        } else if (userNumber > hiddenNumber) {
+          answer = 'Введите число поменьше'
+        } else {
+          answer = 'Вы угадали!'
+        }
+
+        guessNumber.addAttempt();
+
+        guessNumber.setResult({
+          answer: answer,
+          attempts: attempt,
+        });
+      },
+    },
+    formResultSelectors.guessNumber,
+    randomNumber(1, 100)
+    );
+    
+    guessNumber.setEventListeners();
+    
+
+
