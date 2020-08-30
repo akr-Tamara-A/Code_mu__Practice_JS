@@ -12,6 +12,7 @@ export const formSelectors = {
   formMinMultiple: "#formMinMultiple",
   formTextAnalysis: "#formTextAnalysis",
   formGuessNumber: "#formGuessNumber",
+  formGuessCells: "#formGuessCells",
 };
 
 export const formResultSelectors = {
@@ -64,6 +65,10 @@ export const formResultSelectors = {
     percentageOfCharacters: "#percentageOfCharacters",
   },
   guessNumber: {
+    answer: "#answer",
+    attempts: "#attempts",
+  },
+  guessCells: {
     answer: "#answer",
     attempts: "#attempts",
   },

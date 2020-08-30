@@ -1,5 +1,6 @@
 import Form from "../components/Form.js";
 import FormGuessNumber from "../components/FormGuessNumber.js";
+import GameGuessCell from "../components/GameGuessCell.js";
 
 import { formSelectors, formResultSelectors } from "../utils/constants.js";
 import { randomNumber } from "../utils/utils.js";
@@ -387,5 +388,23 @@ formTextAnalysis.setEventListeners();
     
     guessNumber.setEventListeners();
     
+
+  /** ---------------- Игра "Угадай ячейку" ---------------- */
+const gameGuessCell = new GameGuessCell(
+  {gameSelector: formSelectors.formGuessCells,
+  resultSelectors: formResultSelectors.guessCells},
+  {rows: 10,
+  columns: 10,
+  hiddenCells: 10,
+  time: 10}
+);
+gameGuessCell.renderCells();
+gameGuessCell.setListeners();
+
+
+
+
+
+
 
 
