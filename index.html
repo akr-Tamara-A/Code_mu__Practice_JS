@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body class="page">
+  <div class="page__nav nav">
+    <button type="button" class="nav__button nav__up">
+      PREV
+    </button>
+    <button type="button" class="nav__button nav__down">
+      NEXT
+    </button>
+  </div>
   <div class="page__container">
     <h1 class="page__title">Калькулятор фигур</h1>
     <div class="page__section">
@@ -20,9 +28,9 @@
             <input 
               type="text" 
               name="sideOfSquare"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
-          <button type="submit" class="form__button">Посчитать</button>
+          <button type="submit" class="form__button js-has-focus">Посчитать</button>
           <p class="form__answer">
             Площадь квадрата (см2): 
             <span class="form__result" id="area">
@@ -47,16 +55,16 @@
             <input 
               type="text" 
               name="sideAOfRectangle"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
           <label class="form__label">
             Введите длину прямоугольника (см):
             <input 
               type="text" 
               name="sideBOfRectangle"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
-          <button type="submit" class="form__button">Посчитать</button>
+          <button type="submit" class="form__button js-has-focus">Посчитать</button>
           <p class="form__answer">
             Площадь прямоугольника (см2): 
             <span class="form__result" id="area">
@@ -81,9 +89,9 @@
             <input 
               type="text" 
               name="radius"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
-          <button type="submit" class="form__button">Посчитать</button>
+          <button type="submit" class="form__button js-has-focus">Посчитать</button>
           <p class="form__answer">
             Площадь круга (см2): 
             <span class="form__result" id="area">
@@ -108,23 +116,23 @@
             <input 
               type="text" 
               name="sideA"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
           <label class="form__label">
             Введите длину стороны B треугольника (см):
             <input 
               type="text" 
               name="sideB"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
           <label class="form__label">
             Введите длину стороны C треугольника (см):
             <input 
               type="text" 
               name="sideC"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
-          <button type="submit" class="form__button">Посчитать</button>
+          <button type="submit" class="form__button js-has-focus">Посчитать</button>
           <p class="form__answer">
             Площадь треугольника (см2): 
             <span class="form__result" id="area">
@@ -152,23 +160,23 @@
             <input 
               type="text" 
               name="coefficientA"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
           <label class="form__label">
             Введите второй коэффициент:
             <input 
               type="text" 
               name="coefficientB"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
           <label class="form__label">
             Введите третий коэффициент:
             <input 
               type="text" 
               name="coefficientC"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
-          <button type="submit" class="form__button">Посчитать</button>
+          <button type="submit" class="form__button js-has-focus">Посчитать</button>
           <p class="form__answer">
             Первый корень квадратного уравнения:
             <span class="form__result" id="quadraticRoot1">
@@ -193,23 +201,23 @@
             <input 
               type="text" 
               name="coefficientA"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
           <label class="form__label">
             Введите второй коэффициент:
             <input 
               type="text" 
               name="coefficientB"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
           <label class="form__label">
             Введите третий коэффициент:
             <input 
               type="text" 
               name="coefficientC"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
-          <button type="submit" class="form__button">Проверить</button>
+          <button type="submit" class="form__button js-has-focus">Проверить</button>
           <p class="form__answer">
             Ответ:
             <span class="form__result" id="isPythagorasTriple">
@@ -227,9 +235,9 @@
             <input 
               type="text" 
               name="number"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
-          <button type="submit" class="form__button">Проверить</button>
+          <button type="submit" class="form__button js-has-focus">Проверить</button>
           <p class="form__answer">
             Делители:
             <span class="form__result" id="divisors">
@@ -247,16 +255,16 @@
             <input 
               type="text" 
               name="number1"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
           <label class="form__label">
             Введите второе число:
             <input 
               type="text" 
               name="number2"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
-          <button type="submit" class="form__button">Проверить</button>
+          <button type="submit" class="form__button js-has-focus">Проверить</button>
           <p class="form__answer">
             Общие делители:
             <span class="form__result" id="divisors">
@@ -274,16 +282,16 @@
             <input 
               type="text" 
               name="number1"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
           <label class="form__label">
             Введите второе число:
             <input 
               type="text" 
               name="number2"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
-          <button type="submit" class="form__button">Проверить</button>
+          <button type="submit" class="form__button js-has-focus">Проверить</button>
           <p class="form__answer">
             Наибольший общий делитель:
             <span class="form__result" id="maxDivisor">
@@ -301,16 +309,16 @@
             <input 
               type="text" 
               name="number1"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
           <label class="form__label">
             Введите второе число:
             <input 
               type="text" 
               name="number2"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
-          <button type="submit" class="form__button">Проверить</button>
+          <button type="submit" class="form__button js-has-focus">Проверить</button>
           <p class="form__answer">
             Наименьшее общее кратное:
             <span class="form__result" id="minMultiple">
@@ -331,9 +339,9 @@
             <textarea 
               name="text"
               maxlength="400"
-              class="form__textarea"></textarea>
+              class="form__textarea js-has-focus"></textarea>
           </label>
-          <button type="submit" class="form__button">Проверить</button>
+          <button type="submit" class="form__button js-has-focus">Проверить</button>
           <p class="form__answer">
             Количество слов в тексте:
             <span class="form__result" id="numberOfWords">
@@ -368,15 +376,15 @@
             <input 
               type="text" 
               name="number"
-              class="form__input">
+              class="form__input js-has-focus">
           </label>
-          <button type="submit" class="form__button">Проверить</button>
+          <button type="submit" class="form__button js-has-focus">Проверить</button>
           <p class="form__answer">
             Ответ: 
-            <span class="form__result" id="answer"></span>
+            <span class="form__result" id="answer"></span></p>
           <p class="form__answer">
             Попытка: 
-            <span class="form__result" id="attempts"></span>
+            <span class="form__result" id="attempts"></span></p>
         </fieldset>
       </form>
     </div>
@@ -386,9 +394,44 @@
       <form class="form" id="formGuessCells">
         <fieldset class="form__fieldset">
           <legend class="form__legend">Угадайте ячейку</legend>
-          <div class="form__timer">Кликай!</div>
+          <button class="form__button js-options center js-has-focus" type="button">Настройка игры</button>
+          <div class="form__options hidden">
+            <label class="form__label">
+              Введите количество клеточек по ширине:
+              <input 
+                type="text" 
+                name="cellsOnRows"
+                value="8"
+                class="form__input js-has-focus">
+            </label>
+            <label class="form__label">
+              Введите количество клеточек по высоте:
+              <input 
+                type="text" 
+                name="cellsOnColumns"
+                value="8"
+                class="form__input js-has-focus">
+            </label>
+            <label class="form__label">
+              Введите количество загаданных клеточек:
+              <input 
+                type="text" 
+                name="hiddenCells"
+                value="20"
+                class="form__input js-has-focus">
+            </label>
+            <label class="form__label">
+              Введите время для отгадывания:
+              <input 
+                type="text" 
+                name="timeForGuess"
+                value="30"
+                class="form__input js-has-focus">
+            </label>
+          </div>
+          <button class="form__button js-start center js-has-focus" type="button">Кликай!</button>
+          <p class="form__answer center" id="gameResult">Найдите все спрятанные ячейки за время!</p>
           <div class="form__grid">
-
           </div>
         </fieldset>
       </form>

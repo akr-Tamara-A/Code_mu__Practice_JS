@@ -65,11 +65,14 @@ export const formResultSelectors = {
     percentageOfCharacters: "#percentageOfCharacters",
   },
   guessNumber: {
-    answer: "#answer",
+    gameResult: "#answer",
     attempts: "#attempts",
   },
   guessCells: {
-    answer: "#answer",
-    attempts: "#attempts",
+    cellsOnRows: "#cellsOnRows",
+    cellsOnColumns: "#cellsOnColumns",
+    hiddenCells: "#hiddenCells",
+    timeForGuess: "#timeForGuess",
+    gameResult: "#gameResult",
   },
 };

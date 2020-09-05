@@ -1,9 +1,19 @@
 import Form from "../components/Form.js";
 import FormGuessNumber from "../components/FormGuessNumber.js";
 import GameGuessCell from "../components/GameGuessCell.js";
+import TabButtons from "../components/TabButtons.js";
 
 import { formSelectors, formResultSelectors } from "../utils/constants.js";
 import { randomNumber } from "../utils/utils.js";
+
+/** Кнопки для Tab */
+const tabBtnPrev = document.querySelector('.nav__up');
+const tabBtnNext = document.querySelector('.nav__down');
+const nodeTabList = document.querySelectorAll('.js-has-focus');
+
+const tabs = new TabButtons(nodeTabList, tabBtnPrev, tabBtnNext);
+
+
 
 /** ---------------- Калькулятор фигур ---------------- */
 
@@ -393,10 +403,6 @@ formTextAnalysis.setEventListeners();
 const gameGuessCell = new GameGuessCell(
   {gameSelector: formSelectors.formGuessCells,
   resultSelectors: formResultSelectors.guessCells},
-  {rows: 10,
-  columns: 10,
-  hiddenCells: 10,
-  time: 10}
 );
 gameGuessCell.renderCells();
 gameGuessCell.setListeners();
