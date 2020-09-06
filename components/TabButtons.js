@@ -5,7 +5,7 @@ export default class TabButtons {
     this._tabList = Array.from(this._nodeTabList);
     this._btnPrev = btnPrev;
     this._btnNext = btnNext;
-    console.log(this._tabList)
+    //console.log(this._tabList)
   }
 
   setListeners() {

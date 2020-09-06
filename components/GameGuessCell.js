@@ -13,6 +13,7 @@ export default class GameGuessCell {
     this._resultDOM = this._game.querySelector(this._resultSelectors);
     this._rows = 0;
     this._columns = 0;
+    this._cells = 0;
     this._hiddenCells = 0;
     this._time = 0; 
     this._randomArr = [];
@@ -118,8 +119,8 @@ export default class GameGuessCell {
     this._randomArr = this._getRandomNumbers();
     this._setTimerStart();
 
-    const cells = this._grid.querySelectorAll('.form__cell');
-    const cellsArray = Array.from(cells);
+    this._cells = this._grid.querySelectorAll('.form__cell');
+    const cellsArray = Array.from(this._cells);
     cellsArray.forEach((cell) => {
       cell.addEventListener('click', this._handleCellClick);
     })
@@ -130,8 +131,7 @@ export default class GameGuessCell {
   /** Функция для отметки ячейки после клика на нее */
   _isHidden(cell) {
     let id = Number(cell.getAttribute('id'));
-    let arr = this._randomArr;
-    if (arr.includes(id)) {
+    if (this._randomArr.includes(id)) {
       cell.classList.add('form__cell_guessed');
       this._guessedCells ++;
       this._resultDOM.textContent = `Вы нашли ${this._guessedCells} из ${this._hiddenCells} ячеек`;
@@ -191,12 +191,9 @@ export default class GameGuessCell {
     this._buttonStart.removeAttribute('disabled', 'false');
     this._randomArr = [];
     this._guessedCells = 0;
-    const cells = this._grid.querySelectorAll('.form__cell');
-    const cellsArray = Array.from(cells);
+    const cellsArray = Array.from(this._cells);
     cellsArray.forEach((cell) => {
       cell.removeEventListener('click', this._handleCellClick);
     })
   }
-
-
 }
