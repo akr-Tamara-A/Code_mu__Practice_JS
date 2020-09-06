@@ -118,6 +118,10 @@
   outline: none;
 }
 
+.form__input_type_date {
+  width: 120px;
+} 
+
 .form__textarea {
   border: none;
   border: 1px solid black;
