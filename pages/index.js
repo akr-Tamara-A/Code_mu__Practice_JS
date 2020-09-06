@@ -1,10 +1,13 @@
 import Form from "../components/Form.js";
 import FormGuessNumber from "../components/FormGuessNumber.js";
 import GameGuessCell from "../components/GameGuessCell.js";
+import Horoscope from "../components/Horoscope.js";
 import TabButtons from "../components/TabButtons.js";
 
 import { formSelectors, formResultSelectors } from "../utils/constants.js";
 import { randomNumber } from "../utils/utils.js";
+import { zodiacDates } from "../utils/zodiacDates.js";
+import { horoscopeTexts } from "../utils/horoscopeTexts.js";
 
 /** Кнопки для Tab */
 const tabBtnPrev = document.querySelector('.nav__up');
@@ -403,12 +406,20 @@ const gameGuessCell = new GameGuessCell(
   {gameSelector: formSelectors.formGuessCells,
   resultSelectors: formResultSelectors.guessCells},
 );
+
 gameGuessCell.renderCells();
 gameGuessCell.setListeners();
 
 
+/** ---------------- Гороскоп ---------------- */
+const getHoroscope = new Horoscope(
+  formSelectors.getHoroscope,
+  formResultSelectors.getHoroscope,
+  zodiacDates,
+  horoscopeTexts
+);
 
-
+getHoroscope.setEventListeners();
 
 
 

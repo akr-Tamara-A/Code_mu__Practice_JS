@@ -13,6 +13,7 @@ export const formSelectors = {
   formTextAnalysis: "#formTextAnalysis",
   formGuessNumber: "#formGuessNumber",
   formGuessCells: "#formGuessCells",
+  getHoroscope: "#getHoroscope",
 };
 
 export const formResultSelectors = {
@@ -75,4 +76,8 @@ export const formResultSelectors = {
     timeForGuess: "#timeForGuess",
     gameResult: "#gameResult",
   },
+  getHoroscope: {
+    horoscopeSignDay: "#horoscopeSignDay",
+    horoscopeResult: "#horoscopeResult"
+  }
 };

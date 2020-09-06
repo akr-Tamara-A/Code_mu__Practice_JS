@@ -15,7 +15,6 @@ export default class FormGuessNumber extends Form {
       this._button.textContent = 'Попробывать еще';
       this._attempt = 1;
       this._randomNumber = this._getRandomNumber(1, 100);
-      console.log(this._randomNumber)
     } else {
       this._button.textContent = 'Проверить';
     }

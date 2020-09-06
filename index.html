@@ -463,6 +463,56 @@
       </form>
     </div>
 
+    <h1 class="page__title">Шуточный гороскоп</h1>
+    <div class="page__section">
+      <form class="form" id="getHoroscope">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Получите гороскоп на три дня</legend>
+          <label class="form__label">
+            Введите дату рождения:
+            <input 
+            type="date" 
+            name="dateOfBirth"
+            value="2010-01-01"
+            min="1920-01-01"
+            max="2040-01-01"
+            class="form__input form__input_type_date js-has-focus">
+          </label>
+                              <div class="form__inputs">
+            <label class="form__label">
+              Сегодня
+              <input
+                type="radio"
+                name="day"
+                value="today"
+                checked
+                class="form__radio js-has-focus">
+            </label>
+            <label class="form__label">
+              Завтра
+              <input
+                type="radio"
+                name="day"
+                value="tomorrow"
+                class="form__radio js-has-focus">
+            </label>
+            <label class="form__label">
+              Послезавтра
+              <input
+                type="radio"
+                name="day"
+                value="dayAfterTomorrow"
+                class="form__radio js-has-focus">
+            </label>
+          </div>
+          <button class="form__button center js-has-focus" type="submit">Получить гороскоп</button>
+          <p class="form__answer center" id="horoscopeSignDay"></p>
+          <p class="form__result" id="horoscopeResult"></p>
+
+        </fieldset>
+      </form>
+    </div>
+
 
   </div>
   <script type="module" src="./pages/index.js"></script>

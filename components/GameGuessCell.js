@@ -81,7 +81,6 @@ export default class GameGuessCell {
   /** Получение массива номеров спрятанных ячеек */
   _getRandomNumbers() {
     let arr = [];
-    console.log(this._hiddenCells)
 
     while (arr.length < this._hiddenCells) {
       let num = randomNumber(1, this._calcCells());
@@ -124,8 +123,6 @@ export default class GameGuessCell {
     cellsArray.forEach((cell) => {
       cell.addEventListener('click', this._handleCellClick);
     })
-
-    console.log(this);
   }
 
   /** Функция для отметки ячейки после клика на нее */
