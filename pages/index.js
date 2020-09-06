@@ -392,8 +392,7 @@ formTextAnalysis.setEventListeners();
         });
       },
     },
-    formResultSelectors.guessNumber,
-    randomNumber(1, 100)
+    formResultSelectors.guessNumber
     );
     
     guessNumber.setEventListeners();
