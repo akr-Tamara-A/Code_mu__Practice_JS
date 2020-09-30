@@ -14,6 +14,7 @@ export const formSelectors = {
   formGuessNumber: "#formGuessNumber",
   formGuessCells: "#formGuessCells",
   getHoroscope: "#getHoroscope",
+  translit: "#translit",
 };
 
 export const formResultSelectors = {
@@ -79,5 +80,5 @@ export const formResultSelectors = {
   getHoroscope: {
     horoscopeSignDay: "#horoscopeSignDay",
     horoscopeResult: "#horoscopeResult"
-  }
+  },
 };

@@ -513,6 +513,33 @@
       </form>
     </div>
 
+    <h1 class="page__title">Транслит</h1>
+      <div class="page__section">
+        <form class="form" id="translit">
+          <fieldset class="form__fieldset">
+          <legend class="form__legend">Транслит</legend>
+          <label class="form__label">
+            Текст на русском языке:
+            <textarea 
+              id="ruText"
+              inputmode="text"
+              lang="ru"
+              maxlength="400"
+              class="form__textarea js-has-focus"></textarea>
+          </label>
+          <label class="form__label">
+            Текст транслитом:
+            <textarea 
+              id="translitText"
+              inputmode="text"
+              lang="en"
+              maxlength="400"
+              class="form__textarea js-has-focus"></textarea>
+          </label>
+          </fieldset>
+        </form>
+      </div>
+
 
   </div>
   <script type="module" src="./pages/index.js"></script>
