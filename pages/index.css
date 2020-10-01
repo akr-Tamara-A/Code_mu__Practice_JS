@@ -175,6 +175,12 @@
   height: 120px;
 }
 
+.form__textarea::placeholder {
+  color: rgba(0, 0, 0, .6);
+  font-size: 12px;
+  font-style: italic;
+}
+
 .form__answer {
   min-height: 14px;
 }
