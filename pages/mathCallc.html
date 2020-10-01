@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Математические калькуляторы</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body class="page">
+    <header class="page__header">
+      <nav class="page__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./calcFigures.html" class="nav__link">Калькулятор фигур</a>
+          </li>
+          <li class="nav__item">
+            <span class="nav__link nav__link_active">Математические калькуляторы</span>
+          </li>
+          <li class="nav__item">
+            <a href="./formsWithText.html" class="nav__link">Анализ текста</a>
+          </li>
+          <li class="nav__item">
+            <a href="./formsWithText.html" class="nav__link">Игры-угадайки</a>
+          </li>
+          <li class="nav__item">
+            <a href="./oracle.html" class="nav__link">Предсказания</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page__main">
+      <h1 class="page__title">Математические калькуляторы</h1>
+      <div class="page__section">
+        <!-- Нахождение корней квадратного уравнения -->
+        <form class="form" id="quadratic">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">
+              Нахождение корней квадратного уравнения
+            </legend>
+            <label class="form__label">
+              Введите первый коэффициент:
+              <input
+                type="text"
+                name="coefficientA"
+                inputmode="numeric"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <label class="form__label">
+              Введите второй коэффициент:
+              <input
+                type="text"
+                name="coefficientB"
+                inputmode="numeric"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <label class="form__label">
+              Введите третий коэффициент:
+              <input
+                type="text"
+                name="coefficientC"
+                inputmode="numeric"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <button type="submit" class="form__button js-has-focus">
+              Посчитать
+            </button>
+            <p class="form__answer">
+              Первый корень квадратного уравнения:
+              <span class="form__result" id="quadraticRoot1"> </span>
+            </p>
+            <p class="form__answer">
+              Второй корень квадратного уравнения:
+              <span class="form__result" id="quadraticRoot2"> </span>
+            </p>
+          </fieldset>
+        </form>
+
+        <!-- Проверка являются ли числа тройкой Пифагора -->
+        <form class="form" id="pythagorasTriple">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">
+              Являются ли числа тройкой Пифагора
+            </legend>
+            <label class="form__label">
+              Введите первый коэффициент:
+              <input
+                type="text"
+                name="coefficientA"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <label class="form__label">
+              Введите второй коэффициент:
+              <input
+                type="text"
+                name="coefficientB"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <label class="form__label">
+              Введите третий коэффициент:
+              <input
+                type="text"
+                name="coefficientC"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <button type="submit" class="form__button js-has-focus">
+              Проверить
+            </button>
+            <p class="form__answer">
+              Ответ:
+              <span class="form__result" id="isPythagorasTriple"> </span>
+            </p>
+          </fieldset>
+        </form>
+
+        <!-- Делители числа -->
+        <form class="form" id="divisorsOfNumber">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Делители числа</legend>
+            <label class="form__label">
+              Введите число:
+              <input
+                type="text"
+                name="number"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <button type="submit" class="form__button js-has-focus">
+              Проверить
+            </button>
+            <p class="form__answer">
+              Делители:
+              <span class="form__result" id="divisors"> </span>
+            </p>
+          </fieldset>
+        </form>
+
+        <!-- Общие делители двух чисел -->
+        <form class="form" id="collectivedDivisors">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Общие делители двух чисел</legend>
+            <label class="form__label">
+              Введите первое число:
+              <input
+                type="text"
+                name="number1"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <label class="form__label">
+              Введите второе число:
+              <input
+                type="text"
+                name="number2"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <button type="submit" class="form__button js-has-focus">
+              Проверить
+            </button>
+            <p class="form__answer">
+              Общие делители:
+              <span class="form__result" id="divisors"> </span>
+            </p>
+          </fieldset>
+        </form>
+
+        <!-- Наибольший общий делитель двух чисел -->
+        <form class="form" id="maxCollectivedDivisors">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">
+              Наибольший общий делитель двух чисел
+            </legend>
+            <label class="form__label">
+              Введите первое число:
+              <input
+                type="text"
+                name="number1"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <label class="form__label">
+              Введите второе число:
+              <input
+                type="text"
+                name="number2"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <button type="submit" class="form__button js-has-focus">
+              Проверить
+            </button>
+            <p class="form__answer">
+              Наибольший общий делитель:
+              <span class="form__result" id="maxDivisor"> </span>
+            </p>
+          </fieldset>
+        </form>
+
+        <!-- Наименьшее общее кратное двух чисел -->
+        <form class="form" id="formMinMultiple">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">
+              Наименьшее общее кратное двух чисел
+            </legend>
+            <label class="form__label">
+              Введите первое число:
+              <input
+                type="text"
+                name="number1"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <label class="form__label">
+              Введите второе число:
+              <input
+                type="text"
+                name="number2"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <button type="submit" class="form__button js-has-focus">
+              Проверить
+            </button>
+            <p class="form__answer">
+              Наименьшее общее кратное:
+              <span class="form__result" id="minMultiple"> </span>
+            </p>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+
+    <footer class="page__footer">
+      <a href="http://code.mu/ru/javascript/book/practice/" class="page__link"
+        >Практика javascript</a
+      >
+    </footer>
+    <script type="module" src="./mathCallc.js"></script>
+  </body>
+</html>

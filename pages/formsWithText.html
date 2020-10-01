@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Анализатор текста</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body class="page">
+    <header class="page__header">
+      <nav class="page__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./calcFigures.html" class="nav__link">Калькулятор фигур</a>
+          </li>
+          <li class="nav__item">
+            <a href="./mathCallc.html" class="nav__link">Математические калькуляторы</a>
+          </li>
+          <li class="nav__item">
+            <span class="nav__link nav__link_active">Анализ текста</span>
+          </li>
+          <li class="nav__item">
+            <a href="./games.html" class="nav__link">Игры-угадайки</a>
+          </li>
+          <li class="nav__item">
+            <a href="./oracle.html" class="nav__link">Предсказания</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page__main">
+    <h1 class="page__title">Анализ текста</h1>
+    <div class="page__section">
+      <form class="form" id="formTextAnalysis">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Содержание слов и символов в тексте</legend>
+          <label class="form__label">
+            Введите текст:
+            <textarea 
+              name="text"
+              inputmode="text"
+              maxlength="400"
+              class="form__textarea js-has-focus"></textarea>
+          </label>
+          <button type="submit" class="form__button js-has-focus">Проверить</button>
+          <p class="form__answer">
+            Количество слов в тексте:
+            <span class="form__result" id="numberOfWords">
+              
+            </span>
+          <p class="form__answer">
+            Количество символов в тексте:
+            <span class="form__result" id="numberOfCharacters">
+              
+            </span>
+          <p class="form__answer">
+            Количество символов (без пробелов) в тексте:
+            <span class="form__result" id="numberOfCharactersNotBsp">
+              
+            </span>
+          <p class="form__answer">
+            Процентное содержание символов:
+            <span class="form__result form__result_long" id="percentageOfCharacters">
+              
+            </span>
+          </fieldset>
+        </form>
+
+      <form class="form" id="translit">
+        <fieldset class="form__fieldset">
+        <legend class="form__legend">Транслит</legend>
+        <label class="form__label">
+          Текст на русском языке:
+          <textarea 
+            id="ruText"
+            inputmode="text"
+            lang="ru"
+            maxlength="400"
+            class="form__textarea js-has-focus"></textarea>
+        </label>
+        <label class="form__label">
+          Текст транслитом:
+          <textarea 
+            id="translitText"
+            inputmode="text"
+            lang="en"
+            maxlength="400"
+            class="form__textarea js-has-focus"></textarea>
+        </label>
+        </fieldset>
+      </form>
+    </div>
+  </main>
+    
+  <footer class="page__footer">
+    <a href="http://code.mu/ru/javascript/book/practice/" class="page__link">Практика javascript</a>
+  </footer>
+    <script type="module" src="./formsWithText.js></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Предсказания</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body class="page">
+
+    <header class="page__header">
+      <nav class="page__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./calcFigures.html" class="nav__link">Калькулятор фигур</a>
+          </li>
+          <li class="nav__item">
+            <a href="./mathCallc.html" class="nav__link"
+              >Математические калькуляторы</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="./formsWithText.html" class="nav__link">Анализ текста</a>
+          </li>
+          <li class="nav__item">
+            <a href="./games.html" class="nav__link">Игры-угадайки</a>
+          </li>
+          <li class="nav__item">
+            <span class="nav__link nav__link_active">Предсказания</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page__main">
+      <h1 class="page__title">Предсказания</h1>
+      <div class="page__section">
+        <form class="form" id="getHoroscope">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Получите гороскоп на три дня</legend>
+            <label class="form__label">
+              Введите дату рождения:
+              <input
+                type="date"
+                name="dateOfBirth"
+                value="2010-01-01"
+                min="1920-01-01"
+                max="2040-01-01"
+                class="form__input form__input_type_date js-has-focus"
+              />
+            </label>
+            <div class="form__inputs">
+              <label class="form__label">
+                Сегодня
+                <input
+                  type="radio"
+                  name="day"
+                  value="today"
+                  checked
+                  class="form__radio js-has-focus"
+                />
+              </label>
+              <label class="form__label">
+                Завтра
+                <input
+                  type="radio"
+                  name="day"
+                  value="tomorrow"
+                  class="form__radio js-has-focus"
+                />
+              </label>
+              <label class="form__label">
+                Послезавтра
+                <input
+                  type="radio"
+                  name="day"
+                  value="dayAfterTomorrow"
+                  class="form__radio js-has-focus"
+                />
+              </label>
+            </div>
+            <button class="form__button center js-has-focus" type="submit">
+              Получить гороскоп
+            </button>
+            <p class="form__answer center" id="horoscopeSignDay"></p>
+            <p class="form__result" id="horoscopeResult"></p>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    
+    <footer class="page__footer">
+      <a href="http://code.mu/ru/javascript/book/practice/" class="page__link">Практика javascript</a>
+    </footer>
+
+    <script type="module" src="./oracle.js"></script>
+  </body>
+</html>

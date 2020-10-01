@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор фигур</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body class="page">
+    <header class="page__header">
+      <nav class="page__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <span class="nav__link nav__link_active">Калькулятор фигур</span>
+          </li>
+          <li class="nav__item">
+            <a href="./mathCallc.html" class="nav__link"
+              >Математические калькуляторы</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="./formsWithText.html" class="nav__link">Анализ текста</a>
+          </li>
+          <li class="nav__item">
+            <a href="./formsWithText.html" class="nav__link">Игры-угадайки</a>
+          </li>
+          <li class="nav__item">
+            <a href="./oracle.html" class="nav__link">Предсказания</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page__main">
+      <h1 class="page__title">Калькулятор фигур</h1>
+      <div class="page__section">
+        <!-- Форма подсчета площади и периметра квадрата -->
+        <form class="form" id="formSquare">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Калькулятор для квадрата</legend>
+            <label classlegend="form__label">
+              Введите длину стороны квадрата (см):
+              <input
+                type="text"
+                name="sideOfSquare"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <button type="submit" class="form__button js-has-focus">
+              Посчитать
+            </button>
+            <p class="form__answer">
+              Площадь квадрата (см2):
+              <span class="form__result" id="area"> </span>
+            </p>
+            <p class="answer">
+              Периметр квадрата (см):
+              <span class="form__result" id="perimeter"> </span>
+            </p>
+          </fieldset>
+        </form>
+
+        <!-- Форма подсчета площади и периметра прямоугольника -->
+        <form class="form" id="formRectangle">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Калькулятор для прямоугольника</legend>
+            <label class="form__label">
+              Введите ширину прямоугольника (см):
+              <input
+                type="text"
+                name="sideAOfRectangle"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <label class="form__label">
+              Введите длину прямоугольника (см):
+              <input
+                type="text"
+                name="sideBOfRectangle"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <button type="submit" class="form__button js-has-focus">
+              Посчитать
+            </button>
+            <p class="form__answer">
+              Площадь прямоугольника (см2):
+              <span class="form__result" id="area"> </span>
+            </p>
+            <p class="answer">
+              Периметр прямоугольника (см):
+              <span class="form__result" id="perimeter"> </span>
+            </p>
+          </fieldset>
+        </form>
+
+        <!-- Форма подсчета площади и периметра круга -->
+        <form class="form" id="formCircle">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Калькулятор для круга</legend>
+            <label class="form__label">
+              Введите радиус круга (см):
+              <input
+                type="text"
+                name="radius"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <button type="submit" class="form__button js-has-focus">
+              Посчитать
+            </button>
+            <p class="form__answer">
+              Площадь круга (см2):
+              <span class="form__result" id="area"> </span>
+            </p>
+            <p class="answer">
+              Периметр круга (см):
+              <span class="form__result" id="perimeter"> </span>
+            </p>
+          </fieldset>
+        </form>
+
+        <!-- Форма подсчета площади и периметра треугольника -->
+        <form class="form" id="formTriangle">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Калькулятор для треугольника</legend>
+            <label class="form__label">
+              Введите длину стороны А треугольника (см):
+              <input
+                type="text"
+                name="sideA"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <label class="form__label">
+              Введите длину стороны B треугольника (см):
+              <input
+                type="text"
+                name="sideB"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <label class="form__label">
+              Введите длину стороны C треугольника (см):
+              <input
+                type="text"
+                name="sideC"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <button type="submit" class="form__button js-has-focus">
+              Посчитать
+            </button>
+            <p class="form__answer">
+              Площадь треугольника (см2):
+              <span class="form__result" id="area"> </span>
+            </p>
+            <p class="answer">
+              Периметр треугольника (см):
+              <span class="form__result" id="perimeter"> </span>
+            </p>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+
+    <footer class="page__footer">
+      <a href="http://code.mu/ru/javascript/book/practice/" class="page__link"
+        >Практика javascript</a
+      >
+    </footer>
+    <script type="module" src="./calcFigures.js"></script>
+  </body>
+</html>

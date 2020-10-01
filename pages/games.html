@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Игры-угадайки</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body class="page">
+    <header class="page__header">
+      <nav class="page__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./calcFigures.html" class="nav__link">Калькулятор фигур</a>
+          </li>
+          <li class="nav__item">
+            <a href="./mathCallc.html" class="nav__link">Математические калькуляторы</a>
+          </li>
+          <li class="nav__item">
+            <a href="./formsWithText.html" class="nav__link">Анализ текста</a>
+          </li>
+          <li class="nav__item">
+            <span class="nav__link nav__link_active">Игры-угадайки</span>
+          </li>
+          <li class="nav__item">
+            <a href="./oracle.html" class="nav__link">Предсказания</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page__main">
+      <h1 class="page__title">Игры-угадайки</h1>
+      <div class="page__section">
+        <form class="form" id="formGuessNumber">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Угадайте число</legend>
+            <label class="form__label">
+              Введите число от 1 до 100:
+              <input
+                type="text"
+                name="number"
+                inputmode="decimal"
+                class="form__input js-has-focus"
+              />
+            </label>
+            <button type="submit" class="form__button js-has-focus">
+              Проверить
+            </button>
+            <p class="form__answer">
+              Ответ:
+              <span class="form__result" id="answer"></span>
+            </p>
+            <p class="form__answer">
+              Попытка:
+              <span class="form__result" id="attempts"></span>
+            </p>
+          </fieldset>
+        </form>
+
+        <form class="form" id="formGuessCells">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Угадайте ячейку</legend>
+            <button
+              class="form__button js-options center js-has-focus"
+              type="button"
+            >
+              Настройка игры
+            </button>
+            <div class="form__options hidden">
+              <label class="form__label">
+                Введите количество клеточек по ширине:
+                <input
+                  type="text"
+                  name="cellsOnRows"
+                  value="8"
+                  inputmode="decimal"
+                  class="form__input js-has-focus"
+                />
+              </label>
+              <label class="form__label">
+                Введите количество клеточек по высоте:
+                <input
+                  type="text"
+                  name="cellsOnColumns"
+                  value="8"
+                  inputmode="decimal"
+                  class="form__input js-has-focus"
+                />
+              </label>
+              <label class="form__label">
+                Введите количество загаданных клеточек:
+                <input
+                  type="text"
+                  name="hiddenCells"
+                  value="20"
+                  inputmode="decimal"
+                  class="form__input js-has-focus"
+                />
+              </label>
+              <label class="form__label">
+                Введите время для отгадывания:
+                <input
+                  type="text"
+                  name="timeForGuess"
+                  value="30"
+                  inputmode="decimal"
+                  class="form__input js-has-focus"
+                />
+              </label>
+            </div>
+            <button
+              class="form__button js-start center js-has-focus"
+              type="button"
+            >
+              Кликай!
+            </button>
+            <p class="form__answer center" id="gameResult">
+              Найдите все спрятанные ячейки за время!
+            </p>
+            <div class="form__grid"></div>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+
+    <footer class="page__footer">
+      <a href="http://code.mu/ru/javascript/book/practice/" class="page__link"
+        >Практика javascript</a
+      >
+    </footer>
+    <script type="module" src="./games.js"></script>
+  </body>
+</html>
