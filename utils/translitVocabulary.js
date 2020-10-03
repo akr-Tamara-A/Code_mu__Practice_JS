@@ -21,7 +21,7 @@ export const translitVocabulary = [
   {ru: 'и',
   translit: 'i'},
   {ru: 'й',
-  translit: 'i'},
+  translit: 'j'},
   {ru: 'к',
   translit: 'k'},
   {ru: 'л',
