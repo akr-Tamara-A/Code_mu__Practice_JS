@@ -138,6 +138,10 @@
   margin: 10px;
 }
 
+.form__label_disabled {
+  opacity: .6;
+}
+
 .form__button {
   margin: 10px;
   color: sandybrown;
@@ -169,6 +173,10 @@
 
 .form__input:focus {
   outline: none;
+}
+
+.form__input:disabled {
+  border-bottom: 1px solid rgba(0, 0, 0, .5);
 }
 
 .form__input_type_date {
