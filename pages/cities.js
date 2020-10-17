@@ -83,7 +83,7 @@ class GameCities {
     } else {
       if (
         this._letterList.some((letter) => {
-          return letter;
+          return letter === this._inputValue[this._inputValue.length - 1];
         })
       ) {
         this._letter = this._inputValue[this._inputValue.length - 1];
